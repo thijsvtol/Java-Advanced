@@ -1,10 +1,20 @@
 package nl.inholland.myfirstapi.Model;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Skate {
 
+    @Id
+    @SequenceGenerator(name = "skate_seq", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "skate_seq")
     private long id;
     private String name;
     private float price;
+
+    public Skate(){
+    }
 
     public Skate(long id, String name, float price) {
         this.id = id;
