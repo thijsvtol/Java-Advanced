@@ -18,8 +18,8 @@ public class StockController {
     @Autowired
     private StockService service;
 
-    @RequestMapping(value = "/minValue/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity getSkateById(@PathVariable("id") Integer id) {
-        return ResponseEntity.status(200).body(service.getStockMinimum(id));
+    @RequestMapping(value = "/minValue/{value}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity getSkateById(@PathVariable("value") Integer value) {
+        return ResponseEntity.status(200).body(service.getStockMinimum(value));
     }
 }
