@@ -36,7 +36,7 @@ public class SkateController {
 
     @RequestMapping(value = "/nameStartsWith/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity getSkateName(@PathVariable("name") String name) {
-        //Get first skate name that begins with the given parameter
+        //Get first skate name that begins with the given parameters
         List<String> skateNames = new ArrayList<>();
 
         //Get all skate names
